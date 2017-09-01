@@ -1,0 +1,64 @@
+{
+  "name": "client",
+  "version": "0.0.1",
+  "main": "built/index.js",
+  "author": "Andrew Hickey <andrewhickey@live.co.uk>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --env node",
+    "precommit": "lint-staged",
+    "pretty": "prettier --write src/**/*.ts"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/../node_modules/ts-jest/preprocessor.js"
+    },
+    "rootDir": "src",
+    "testRegex": ".*(\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  },
+  "dependencies": {
+    "nock": "^9.0.13",
+    "popsicle": "^9.1.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "recompose": "^0.23.1",
+    "redux": "^3.6.0",
+    "redux-actions": "^2.0.2",
+    "redux-promise": "^0.5.3",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^19.2.2",
+    "@types/react": "^15.0.22",
+    "@types/react-dom": "^15.5.0",
+    "@types/react-test-renderer": "^15.4.5",
+    "@types/recompose": "^0.22.0",
+    "@types/redux-actions": "^1.2.4",
+    "@types/redux-mock-store": "^0.0.7",
+    "@types/redux-promise": "^0.5.24",
+    "@types/redux-saga": "^0.10.5",
+    "husky": "^0.14.3",
+    "jest": "^20.0.4",
+    "jest-cli": "^20.0.4",
+    "lint-staged": "^4.0.4",
+    "prettier": "^1.6.1",
+    "react-test-renderer": "^15.5.4",
+    "redux-devtools": "^3.4.0",
+    "redux-mock-store": "^1.2.3",
+    "ts-jest": "^20.0.14",
+    "typescript": "^2.5.2"
+  }
+}
