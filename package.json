@@ -10,7 +10,7 @@
     "pretty": "prettier --write src/**/*.ts"
   },
   "lint-staged": {
-    "*.js": [
+    "*.ts": [
       "prettier --write",
       "git add"
     ]
