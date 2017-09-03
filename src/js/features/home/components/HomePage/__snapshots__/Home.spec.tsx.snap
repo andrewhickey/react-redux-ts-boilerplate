@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with no HoC 1`] = `
+<div>
+  Hello dog 
+  test
+</div>
+`;
+
+exports[`renders correctly with the HoC 1`] = `
+<div>
+  Hello dog 
+  dog
+</div>
+`;
