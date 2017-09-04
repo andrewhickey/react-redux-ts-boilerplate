@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@types/history@*":
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/@types/history/-/history-4.6.0.tgz#093d67ed780d889c9543f6dca24ebee0b6b9fc45"
+
 "@types/jest@^20.0.8":
   version "20.0.8"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-20.0.8.tgz#7f8c97f73d20d3bf5448fbe33661a342002b5954"
@@ -10,6 +14,28 @@
   version "15.5.4"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-15.5.4.tgz#3f75ba86a2ce9a7d1d9e7d1ee3f186f3a9652d8f"
   dependencies:
+    "@types/react" "*"
+
+"@types/react-redux@^5.0.6":
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/@types/react-redux/-/react-redux-5.0.6.tgz#6bd25c8c0ffa570c1bd36ba7e8ec328a879e5cfa"
+  dependencies:
+    "@types/react" "*"
+    redux "^3.6.0"
+
+"@types/react-router-dom@^4.0.7":
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/@types/react-router-dom/-/react-router-dom-4.0.7.tgz#65b192f7a5dbd1c05a8d04cc5863c9775705a435"
+  dependencies:
+    "@types/history" "*"
+    "@types/react" "*"
+    "@types/react-router" "*"
+
+"@types/react-router@*":
+  version "4.0.15"
+  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-4.0.15.tgz#be8aaefc20afd968a5dbcffcf09060e6c2e8746e"
+  dependencies:
+    "@types/history" "*"
     "@types/react" "*"
 
 "@types/react-test-renderer@^15.5.4":
@@ -1028,10 +1054,6 @@ iconv-lite@0.4.13:
 iconv-lite@~0.4.13:
   version "0.4.18"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.18.tgz#23d8656b16aae6742ac29732ea8f0336a4789cf2"
-
-immutable@^3.0.0:
-  version "3.8.1"
-  resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.1.tgz#200807f11ab0f72710ea485542de088075f68cd2"
 
 indent-string@^2.1.0:
   version "2.1.0"
@@ -2309,14 +2331,6 @@ redux-promise@^0.5.3:
   dependencies:
     flux-standard-action "^0.6.1"
 
-redux-router5@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/redux-router5/-/redux-router5-5.0.0.tgz#6e2292a62221c5bcf720e785bf5bbd8c68c89588"
-  dependencies:
-    router5-transition-path "^5.0.0"
-  optionalDependencies:
-    immutable "^3.0.0"
-
 redux-thunk@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.2.0.tgz#e615a16e16b47a19a515766133d1e3e99b7852e5"
@@ -2429,10 +2443,6 @@ rimraf@^2.6.1:
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.1.tgz#c2338ec643df7a1b7fe5c54fa86f57428a55f33d"
   dependencies:
     glob "^7.0.5"
-
-router5-transition-path@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/router5-transition-path/-/router5-transition-path-5.0.0.tgz#8be2a6a0907e93083a4b7d705713f624cc60b861"
 
 rxjs@^5.0.0-beta.11:
   version "5.4.3"
