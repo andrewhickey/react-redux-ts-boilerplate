@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches the stored snapshot when rendering with a store 1`] = `
+<div
+  className="appContainer"
+/>
+`;

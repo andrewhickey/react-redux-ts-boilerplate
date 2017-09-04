@@ -43,6 +43,7 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "@types/enzyme": "^2.8.6",
     "@types/jest": "^20.0.8",
     "@types/react": "^16.0.5",
     "@types/react-dom": "^15.5.4",
@@ -53,9 +54,11 @@
     "@types/redux-actions": "^1.2.8",
     "@types/redux-mock-store": "^0.0.11",
     "@types/redux-promise": "^0.5.26",
+    "enzyme": "^2.9.1",
     "husky": "^0.14.3",
     "jest": "^20.0.4",
     "jest-cli": "^20.0.4",
+    "jest-enzyme": "^3.8.1",
     "lint-staged": "^4.0.4",
     "prettier": "^1.6.1",
     "react-test-renderer": "^15.5.4",
