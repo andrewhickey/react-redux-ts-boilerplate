@@ -7,14 +7,12 @@
   "scripts": {
     "test": "jest --env node",
     "coverage": "jest --env node --coverage",
-    "precommit": "lint-staged",
-    "pretty": "prettier --write src/**/*.ts"
+    "lint": "tslint -c tslint.json \"src/**/*.ts?(x)\"",
+    "precommit": "pretty-staged",
+    "pretty": "prettier --write src/**/*.tsx?"
   },
-  "lint-staged": {
-    "*.ts": [
-      "prettier --write",
-      "git add"
-    ]
+  "pretty-staged": {
+    "*.ts": ["prettier --write", "lint -- --fix", "git add"]
   },
   "jest": {
     "transform": {
@@ -22,12 +20,7 @@
     },
     "rootDir": "src",
     "testRegex": ".*(\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json"
-    ]
+    "moduleFileExtensions": ["ts", "tsx", "js", "json"]
   },
   "dependencies": {
     "nock": "^9.0.14",
@@ -65,6 +58,8 @@
     "redux-devtools": "^3.4.0",
     "redux-mock-store": "^1.2.3",
     "ts-jest": "^20.0.14",
+    "tslint": "^5.7.0",
+    "tslint-config-prettier": "^1.5.0",
     "typescript": "^2.5.2"
   }
 }

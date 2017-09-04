@@ -1,7 +1,9 @@
-import * as React from 'react'
-import * as ReactDOM from 'react-dom'
-import App from './features/core/App'
-import createAppProps from './features/core/createAppProps'
+import * as React from "react"
+import * as ReactDOM from "react-dom"
+import { BrowserRouter as Router } from "react-router-dom"
+import { Provider } from "react-redux"
+import App from "./features/core/components/App/App"
+import createAppStore from "./features/core/createAppStore"
 
 /**
  * It all starts here. This file initializes;
@@ -9,7 +11,13 @@ import createAppProps from './features/core/createAppProps'
  * - the application state, Redux
  * - the view layer, React
  */
+const store = createAppStore(false)
 
-const appProps = createAppProps(false);
-
-ReactDOM.render(<App {...appProps} />, document.getElementById('root'))
+ReactDOM.render(
+  <Provider store={store}>
+    <Router>
+      <App />
+    </Router>
+  </Provider>,
+  document.getElementById("root")
+)

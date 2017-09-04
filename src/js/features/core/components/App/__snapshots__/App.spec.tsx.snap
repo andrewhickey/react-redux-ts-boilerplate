@@ -2,6 +2,8 @@
 
 exports[`matches the stored snapshot when rendering with a store 1`] = `
 <div
-  className="appContainer"
-/>
+  id="appContainer"
+>
+  app
+</div>
 `;
