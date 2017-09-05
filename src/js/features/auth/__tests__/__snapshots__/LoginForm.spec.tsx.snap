@@ -21,3 +21,46 @@ exports[`LoginFormComponent Matches the snapshot 1`] = `
   </div>
 </form>
 `;
+
+exports[`PasswordInput Matches the snapshot at the top level 1`] = `
+<div
+  className="pt-form-group pt-intent-danger"
+>
+  <Blueprint.InputGroup
+    checked={false}
+    className="pt-large"
+    id="password-input"
+    leftIconName="lock"
+    name="username"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder="Password"
+    type="password"
+    value=""
+  />
+</div>
+`;
+
+exports[`UsernameInput Matches the snapshot 1`] = `
+<div
+  className="pt-form-group pt-intent-danger"
+>
+  <Blueprint.InputGroup
+    checked={false}
+    className="pt-large"
+    id="username-input"
+    leftIconName="person"
+    name="username"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder="Username"
+    value=""
+  />
+</div>
+`;
