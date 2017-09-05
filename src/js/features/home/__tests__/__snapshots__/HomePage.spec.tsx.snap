@@ -8,8 +8,8 @@ exports[`renders correctly with no HoC 1`] = `
 `;
 
 exports[`renders correctly with the HoC 1`] = `
-<div>
-  Hello dog 
-  dog
-</div>
+<Component
+  name="dog"
+  number={2}
+/>
 `;

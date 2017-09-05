@@ -1,9 +1,10 @@
 import * as React from "react"
 import * as ReactDOM from "react-dom"
-import { BrowserRouter as Router } from "react-router-dom"
 import { Provider } from "react-redux"
-import App from "./features/core/components/App/App"
-import createAppStore from "./features/core/createAppStore"
+import { BrowserRouter as Router } from "react-router-dom"
+import App from "./features/core/components/App"
+import createRootReducer from "./features/redux/createRootReducer"
+import createStore from "./features/redux/createStore"
 
 /**
  * It all starts here. This file initializes;
@@ -11,7 +12,7 @@ import createAppStore from "./features/core/createAppStore"
  * - the application state, Redux
  * - the view layer, React
  */
-const store = createAppStore(false)
+const store = createStore(createRootReducer())
 
 ReactDOM.render(
   <Provider store={store}>

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginFormComponent Matches the snapshot 1`] = `
+<form>
+  <div
+    className="pt-control-group pt-vertical"
+  >
+    <Field
+      component={[Function]}
+      name="username"
+    />
+    <Field
+      component={[Function]}
+      name="password"
+    />
+    <Blueprint.Button
+      className="pt-large"
+      iconName="log-in"
+      id="login-button"
+    />
+  </div>
+</form>
+`;

@@ -1,28 +1,30 @@
-import { createAction, Action } from "redux-actions"
 import { AuthState } from "./types"
 
 export const LOGIN_ACTION = "auth/LOGIN_ACTION"
 
-export const reduceLoginSuccess = (state: AuthState, action: Action<any>) => ({
+export const reduceLoginSuccess = (state: AuthState, action: any) => ({
   ...state,
-  user: action.payload
+  user: action.payload,
 })
 
-export const reduceLoginFailure = (state: AuthState, action: Action<any>) => ({
+export const reduceLoginFailure = (state: AuthState, action: any) => ({
   ...state,
-  error: action.payload
+  error: action.payload,
 })
 
 const reduceLogin = {
   next: reduceLoginSuccess,
-  throw: reduceLoginFailure
+  throw: reduceLoginFailure,
 }
 
-export const loginAction = createAction(LOGIN_ACTION)
+export const loginAction = (userPromise: Promise<any>) => ({
+  payload: userPromise,
+  type: LOGIN_ACTION,
+})
 
 export const login = () => (
-  dispatch: Function,
-  getState: Function,
+  dispatch: (action: any) => any,
+  getState: () => any,
   additionalParams: any
 ) => {
   const authService = additionalParams.authService
@@ -32,6 +34,6 @@ export const login = () => (
 }
 
 export default {
+  actions: { loginAction },
   reducer: { [LOGIN_ACTION]: reduceLogin },
-  actions: { loginAction }
 }

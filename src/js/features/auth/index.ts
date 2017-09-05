@@ -1,6 +1,6 @@
 import { handleActions } from "redux-actions"
-import { AuthState } from "./types"
 import login from "./login"
+import { AuthState } from "./types"
 
 // export const USER_EXPIRED = require('./constants').USER_EXPIRED;
 // export const REDIRECT_SUCCESS = require('./constants').REDIRECT_SUCCESS;
@@ -13,14 +13,14 @@ import login from "./login"
 // export const USER_SIGNED_OUT = require('./constants').USER_SIGNED_OUT;
 
 const initialState: AuthState = {
+  error: null,
   user: null,
   working: false,
-  error: null
 }
 
 export const reducer = handleActions(
   {
-    ...login.reducer
+    ...login.reducer,
   },
   initialState
 )

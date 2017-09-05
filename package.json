@@ -5,33 +5,46 @@
   "author": "Andrew Hickey <andrewhickey@live.co.uk>",
   "license": "MIT",
   "scripts": {
-    "test": "jest --env node",
-    "coverage": "jest --env node --coverage",
-    "lint": "tslint -c tslint.json \"src/**/*.ts?(x)\"",
-    "precommit": "pretty-staged",
-    "pretty": "prettier --write src/**/*.tsx?"
+    "test": "jest --env=node",
+    "coverage": "jest --env=node --coverage",
+    "lint": "tslint -c tslint.json --fix \"src/**/*.ts?(x)\"",
+    "precommit": "lint-staged",
+    "pretty": "prettier --write \"src/**/*.ts?(x)\""
   },
-  "pretty-staged": {
-    "*.ts": ["prettier --write", "lint -- --fix", "git add"]
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write 'src/**/*.ts?(x)'",
+      "tslint -c tslint.json --fix 'src/**/*.ts?(x)'",
+      "git add"
+    ]
   },
   "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/../testSetup.ts",
     "transform": {
       ".(ts|tsx)": "<rootDir>/../node_modules/ts-jest/preprocessor.js"
     },
     "rootDir": "src",
     "testRegex": ".*(\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": ["ts", "tsx", "js", "json"]
+    "moduleFileExtensions": ["ts", "tsx", "js", "json"],
+    "globals": {
+      "ts-jest": {
+        "skipBabel": true
+      }
+    }
   },
   "dependencies": {
+    "@blueprintjs/core": "^1.27.0",
     "nock": "^9.0.14",
     "popsicle": "^9.1.0",
     "react": "^15.6.1",
+    "react-addons-css-transition-group": "^15.6.0",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "recompose": "^0.25.0",
     "redux": "^3.7.2",
     "redux-actions": "^2.2.1",
+    "redux-form": "^7.0.3",
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.2.0"
   },
@@ -42,9 +55,9 @@
     "@types/react-dom": "^15.5.4",
     "@types/react-redux": "^5.0.6",
     "@types/react-router-dom": "^4.0.7",
-    "@types/react-test-renderer": "^15.5.4",
     "@types/recompose": "^0.24.1",
     "@types/redux-actions": "^1.2.8",
+    "@types/redux-form": "^7.0.4",
     "@types/redux-mock-store": "^0.0.11",
     "@types/redux-promise": "^0.5.26",
     "enzyme": "^2.9.1",
@@ -54,12 +67,13 @@
     "jest-enzyme": "^3.8.1",
     "lint-staged": "^4.0.4",
     "prettier": "^1.6.1",
-    "react-test-renderer": "^15.5.4",
+    "react-test-renderer": "^15.6.1",
     "redux-devtools": "^3.4.0",
     "redux-mock-store": "^1.2.3",
     "ts-jest": "^20.0.14",
     "tslint": "^5.7.0",
     "tslint-config-prettier": "^1.5.0",
+    "tslint-react": "^3.2.0",
     "typescript": "^2.5.2"
   }
 }

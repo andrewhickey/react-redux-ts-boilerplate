@@ -1,10 +1,4 @@
-import {
-  createStore,
-  applyMiddleware,
-  Reducer,
-  StoreEnhancer,
-  Middleware
-} from "redux"
+import { applyMiddleware, createStore, Middleware, Reducer } from "redux"
 import * as promiseMiddleware from "redux-promise"
 import thunkMiddleware from "redux-thunk"
 
