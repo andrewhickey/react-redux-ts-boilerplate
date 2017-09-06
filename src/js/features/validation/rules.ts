@@ -2,7 +2,7 @@ import { IValidatorFunc } from './index'
 
 export const isRequired = (errorMessage: string): IValidatorFunc<any> => (
   value: any
-) => (!!value ? null : errorMessage)
+) => (value === undefined || value === null ? errorMessage : null)
 
 export const isLongerThan = (
   length: number,
