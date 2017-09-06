@@ -1,26 +1,26 @@
-import { InputGroup } from "@blueprintjs/core"
-import { shallow } from "enzyme"
-import * as React from "react"
+import { InputGroup } from '@blueprintjs/core'
+import { shallow } from 'enzyme'
+import * as React from 'react'
 import {
   WrappedFieldInputProps,
   WrappedFieldMetaProps,
   WrappedFieldProps,
-} from "redux-form"
+} from 'redux-form'
 import {
   LoginFormComponent,
   PasswordInput,
   UsernameInput,
-} from "../components/LoginForm"
+} from '../components/LoginForm'
 
 const input: WrappedFieldInputProps = {
   checked: false,
-  name: "username",
+  name: 'username',
   onBlur: () => {},
   onChange: () => {},
   onDragStart: () => {},
   onDrop: () => {},
   onFocus: () => {},
-  value: "",
+  value: '',
 }
 
 const meta: WrappedFieldMetaProps = {
@@ -30,7 +30,7 @@ const meta: WrappedFieldMetaProps = {
   dirty: false,
   dispatch: () => {},
   error: undefined,
-  form: "login",
+  form: 'login',
   initial: undefined,
   invalid: false,
   pristine: true,
@@ -47,27 +47,27 @@ const props: WrappedFieldProps = {
   meta,
 }
 
-describe("UsernameInput", () => {
-  it("Matches the snapshot", () => {
+describe('UsernameInput', () => {
+  it('Matches the snapshot', () => {
     const wrapper = shallow(<UsernameInput {...props} />)
     expect(wrapper).toMatchSnapshot()
   })
 })
 
-describe("PasswordInput", () => {
-  it("Matches the snapshot at the top level", () => {
+describe('PasswordInput', () => {
+  it('Matches the snapshot at the top level', () => {
     const wrapper = shallow(<PasswordInput {...props} />)
     expect(wrapper).toMatchSnapshot()
   })
 })
 
-describe("LoginFormComponent", () => {
-  it("Matches the snapshot", () => {
+describe('LoginFormComponent', () => {
+  it('Matches the snapshot', () => {
     const wrapper = shallow(<LoginFormComponent />)
     expect(wrapper).toMatchSnapshot()
   })
-  it("Has a button to submit the login", () => {
+  it('Has a button to submit the login', () => {
     const wrapper = shallow(<LoginFormComponent />)
-    expect(wrapper.find("#login-button")).toBePresent()
+    expect(wrapper.find('#login-button')).toBePresent()
   })
 })

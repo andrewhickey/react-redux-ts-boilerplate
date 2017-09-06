@@ -1,10 +1,10 @@
-import * as React from "react"
-import * as ReactDOM from "react-dom"
-import { Provider } from "react-redux"
-import { BrowserRouter as Router } from "react-router-dom"
-import App from "./features/core/components/App"
-import createRootReducer from "./features/redux/createRootReducer"
-import createStore from "./features/redux/createStore"
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import { BrowserRouter as Router } from 'react-router-dom'
+import App from './features/core/components/App'
+import createRootReducer from './features/redux/createRootReducer'
+import createStore from './features/redux/createStore'
 
 /**
  * It all starts here. This file initializes;
@@ -20,5 +20,5 @@ ReactDOM.render(
       <App />
     </Router>
   </Provider>,
-  document.getElementById("root")
+  document.getElementById('root')
 )

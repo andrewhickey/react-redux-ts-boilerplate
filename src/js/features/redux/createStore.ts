@@ -1,6 +1,6 @@
-import { applyMiddleware, createStore, Middleware, Reducer } from "redux"
-import * as promiseMiddleware from "redux-promise"
-import thunkMiddleware from "redux-thunk"
+import { applyMiddleware, createStore, Middleware, Reducer } from 'redux'
+import * as promiseMiddleware from 'redux-promise'
+import thunkMiddleware from 'redux-thunk'
 
 export default (
   rootReducer: Reducer<{}>,

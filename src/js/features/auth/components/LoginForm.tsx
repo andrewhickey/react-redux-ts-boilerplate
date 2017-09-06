@@ -1,6 +1,12 @@
-import { Button, Classes, InputGroup } from "@blueprintjs/core"
-import * as React from "react"
-import { Field, GenericField, reduxForm, WrappedFieldProps } from "redux-form"
+import { Button, Classes, InputGroup } from '@blueprintjs/core'
+import * as React from 'react'
+import {
+  Field,
+  GenericField,
+  InjectedFormProps,
+  reduxForm,
+  WrappedFieldProps,
+} from 'redux-form'
 
 export const UsernameInput: React.StatelessComponent<WrappedFieldProps> = ({
   input,
@@ -37,8 +43,8 @@ export const PasswordInput: React.StatelessComponent<WrappedFieldProps> = ({
 
 const WrapperField = Field as new () => GenericField<{}>
 
-export const LoginFormComponent = () => (
-  <form>
+export const LoginFormComponent = ({ handleSubmit }: InjectedFormProps) => (
+  <form onSubmit={handleSubmit}>
     <div className="pt-control-group pt-vertical">
       <WrapperField name="username" component={UsernameInput} />
       <WrapperField name="password" component={PasswordInput} />
@@ -47,4 +53,4 @@ export const LoginFormComponent = () => (
   </form>
 )
 
-export default reduxForm({ form: "login" })(LoginFormComponent)
+export default reduxForm({ form: 'login' })(LoginFormComponent)

@@ -1,6 +1,6 @@
-import { handleActions } from "redux-actions"
-import login from "./login"
-import { AuthState } from "./types"
+import { handleActions } from 'redux-actions'
+import login from './login'
+import { AuthState } from './types'
 
 // export const USER_EXPIRED = require('./constants').USER_EXPIRED;
 // export const REDIRECT_SUCCESS = require('./constants').REDIRECT_SUCCESS;

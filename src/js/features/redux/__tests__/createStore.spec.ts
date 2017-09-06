@@ -1,9 +1,9 @@
-import { combineReducers } from "redux"
-import createStore from "../createStore"
+import { combineReducers } from 'redux'
+import createStore from '../createStore'
 
-const testReducer = (state: string = "") => state
+const testReducer = (state: string = '') => state
 
-it("successfully creates a store with a test reducer", () => {
+it('successfully creates a store with a test reducer', () => {
   // const startState = { test: "test" }
   // const rootReducer = combineReducers({ test: testReducer })
   // const store = createStore(rootReducer, startState)

@@ -1,6 +1,6 @@
-import { AuthState } from "./types"
+import { AuthState } from './types'
 
-export const LOGIN_ACTION = "auth/LOGIN_ACTION"
+export const LOGIN_ACTION = 'auth/LOGIN_ACTION'
 
 export const reduceLoginSuccess = (state: AuthState, action: any) => ({
   ...state,
