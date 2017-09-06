@@ -1,6 +1,6 @@
-const identity = (value: any) => value
-
 export type IValidatorFunc<T> = (value: T) => string | null
+
+const identity = (value: any) => value
 
 export const runValidator = (value: any) => (validator: IValidatorFunc<any>) =>
   validator(value)
@@ -11,12 +11,3 @@ export const composeValidators = (
   const errors = validators.map(runValidator)
   return errors.filter(identity)
 }
-
-export const isRequired = (errorMessage: string): IValidatorFunc<any> => (
-  value: any
-) => (!!value ? null : errorMessage)
-
-export const isLongerThan = (
-  length: number,
-  errorMessage: string
-): IValidatorFunc<string> => (value: any) => (!!value ? null : errorMessage)

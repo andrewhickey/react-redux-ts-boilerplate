@@ -1,4 +1,5 @@
-import { composeValidators, isLongerThan, isRequired } from '../../validation'
+import { composeValidators } from '../../validation'
+import { isLongerThan, isRequired } from '../../validation/rules'
 
 const validate = composeValidators(
   isRequired('Required'),
