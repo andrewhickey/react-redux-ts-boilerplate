@@ -1,4 +1,3 @@
-import { InputGroup } from '@blueprintjs/core'
 import { shallow } from 'enzyme'
 import * as React from 'react'
 import {
@@ -10,7 +9,7 @@ import {
   LoginFormComponent,
   PasswordInput,
   UsernameInput,
-} from '../components/LoginForm'
+} from '../../components/LoginForm'
 
 const input: WrappedFieldInputProps = {
   checked: false,

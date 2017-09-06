@@ -1,4 +1,4 @@
-import validateLoginForm from '../validation/loginForm'
+import validateLoginForm from '../../validation/loginForm'
 
 describe('loginFormValidate', () => {
   it('returns an error when username is missing', () => {
